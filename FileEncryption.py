@@ -10,17 +10,18 @@ code = { "A": "!", "a": "*", "B": "1", "b": "1", "C": "&", "c": "@", "D": "3", "
 for line in infile:
     text = line
 
-NewText = ""
+encrypted_code = ""
 
 for i in range(0, len(text)):
     if text[i] in code.keys():
-        NewText += code[text[i]]
+        encrypted_code += code[text[i]]
     else:
-        NewText += text[i]
+        encrypted_code += text[i]
 
-print(NewText)
+
+print(encrypted_code)
 
 outfile = open("encrypted.txt", "w")
-outfile.write(NewText + "\n")
+outfile.write(encrypted_code+ "\n")
 
 outfile.close()
