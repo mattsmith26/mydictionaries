@@ -39,7 +39,7 @@ print()
 print('*****  start section 2 - search dictionary ********')
 print()
 
-name = "Chri"
+name = "Chris"
 
 if name in phonebook:
     print(phonebook[name])
@@ -128,6 +128,7 @@ for value in phonebook.values():
 for k,v in phonebook.items():
     print("key: ", k, "   value:", v)
 
+
 # tuples are immutable objects that you cannot change
 for tuple in phonebook.items():
     print(tuple)
@@ -156,7 +157,9 @@ print(phone)
 
 
 #clear out your dictionary, dictionary exists but nothing in it
-#phonebook.clearprint()
+#phonebook.clear()
+
+
 #print(phonebook)
 
 
@@ -167,7 +170,7 @@ print()
 
 
 
-'''
+
 
 
 print()
@@ -175,6 +178,12 @@ print('*****  start section 7 - using pop method ********')
 print()
 
 
+
+#a = phonebook.pop("Chris", "not found") # pops chris out of the phonebook dictionary
+
+#print(a)
+
+#print(phonebook)
 
 
 
@@ -185,9 +194,22 @@ print()
 
 
 
+
+
+
+
 print()
 print('*****  start section 8 - using popitem ********')
 print()
+
+
+print(phonebook)
+#a = phonebook.popitem() # item gives you both the key and value, so it is a tuple
+# doesn't do the random part, just pops out the last key/item in the dictionary
+
+
+#print(a)
+#print(phonebook)
 
 
 
@@ -200,22 +222,32 @@ print()
 
 
 
+
+
 print()
 print('*****  start section 9 - using random and converting to list ********')
 print()
 
 
+list_of_keys = list(phonebook)
+print(list_of_keys)
+
+random_key = random.choice(list_of_keys)
+print(random_key)
+
+random_value = phonebook[random_key]
+print(random_value)
 
 
+
+#alternatively
+
+random_value = phonebook[random.choice(list(phonebook))]
+print(random_value)
 
 print()
 print('*****  end section 9 ********')
 print()
-
-
-'''
-
-
 
 
 
